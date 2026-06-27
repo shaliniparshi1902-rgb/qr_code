@@ -1,0 +1,17 @@
+rules:
+  - id: python-flask-debug-enabled
+    patterns:
+      - pattern: app.run(..., debug=True, ...)
+    message: Avoid enabling Flask debug mode in production.
+    languages: [python]
+    severity: WARNING
+
+  - id: python-hardcoded-secret-key
+    patterns:
+      - pattern-either:
+          - pattern: SECRET_KEY = "..."
+          - pattern: app.config["SECRET_KEY"] = "..."
+    message: Avoid hardcoded secret keys; load them from environment variables.
+    languages: [python]
+    severity: WARNING
+

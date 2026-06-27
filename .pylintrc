@@ -1,0 +1,15 @@
+[MAIN]
+py-version=3.12
+ignore=.venv,venv
+
+[MESSAGES CONTROL]
+disable=
+    missing-module-docstring,
+    missing-class-docstring,
+    missing-function-docstring,
+    too-many-return-statements,
+    too-few-public-methods
+
+[FORMAT]
+max-line-length=100
+
